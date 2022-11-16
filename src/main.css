@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #222;
+  color: #fff;
+  overflow: hidden;
+}
+
+.overlay-name {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 128, 128, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  transition: 0.5s;
+}
+.overlay-name.removeme {
+  transform: scale(50);
+  opacity: 0;
+}
+.overlay-name .from {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+}
+.overlay-name .from input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #222;
+  color: white;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  padding: 2px 5px;
+  height: 35px;
+  text-align: center;
+}
+.overlay-name .from input:focus {
+  outline: none;
+}
+.overlay-name .from input::-moz-placeholder {
+  color: white;
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.overlay-name .from input:-ms-input-placeholder {
+  color: white;
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.overlay-name .from input::placeholder {
+  color: white;
+  font-size: 17px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.overlay-name .from .gameon {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #222;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.overlay-name .from .gameon:hover {
+  background-color: goldenrod;
+  color: #222;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+.container .contant-space {
+  position: relative;
+  margin-top: 30px;
+  background-color: rgba(128, 128, 128, 0.327);
+  border-radius: 10px;
+  padding: 15px 15px;
+}
+.container .contant-space .realad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.container .contant-space .realad i {
+  transition: 0.5s;
+}
+.container .contant-space .realad i:hover {
+  transform: rotate(360deg);
+}
+.container .contant-space .flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 19px;
+}
+.container .contant-space .flex:not(:last-child) {
+  margin-bottom: 15px;
+}
+.container .contant-space i {
+  margin-right: 10px;
+}
+.container .contant-space .wrong,
+.container .contant-space .right {
+  width: 40px;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+.container .contant-space .wrong i {
+  color: tomato;
+}
+.container .contant-space .right i {
+  color: teal;
+}
+.container .body {
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 20px 0;
+}
+.container .body .container-cards {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.container .body .container-cards.diable {
+  pointer-events: none;
+}
+.container .body .card {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 190px;
+  width: 190px;
+  overflow: hidden;
+}
+.container .body .style-card {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  cursor: pointer;
+  background-color: teal;
+  height: 190px;
+  width: 190px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+}
+.container .body .front-card {
+  transform: rotateY(-180deg);
+  transition: 0.3s;
+}
+.container .body .back-card {
+  color: goldenrod;
+}
+.container .body .back-card,
+.container .body .card {
+  transition: 0.3s;
+}
+.container .body .back-card.show .back-card, .container .body .back-card.same .back-card,
+.container .body .card.show .back-card,
+.container .body .card.same .back-card {
+  transform: rotateY(180deg);
+}
+.container .body .back-card.show .front-card, .container .body .back-card.same .front-card,
+.container .body .card.show .front-card,
+.container .body .card.same .front-card {
+  transform: rotateY(0);
+}
+.container .body .back-card.same,
+.container .body .card.same {
+  transition: 0.3s;
+  pointer-events: none;
+}
+.container .body .back-card.same .front-card,
+.container .body .card.same .front-card {
+  background-color: gray;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.winner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: teal;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  z-index: -10;
+  opacity: 0;
+}
+.winner.finshed {
+  z-index: 10;
+  opacity: 1;
+}
+.winner .box {
+  margin-bottom: 30%;
+}
+.winner p {
+  width: 75%;
+  margin: auto;
+  line-height: 1.2;
+}
+.winner .trophy {
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  color: wheat;
+}
+.winner h2 {
+  color: wheat;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.winner .mright {
+  font-weight: bold;
+  color: black;
+}
+.winner .mwrong {
+  font-weight: bold;
+  color: tomato;
+}/*# sourceMappingURL=main.css.map */

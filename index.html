@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="src/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Barlow:wght@300;400;500;600;700&family=Comforter+Brush&family=Gochi+Hand&family=Handlee&family=Harmattan:wght@400;700&family=Josefin+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Patrick+Hand+SC&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="bookmark.svg" type="image/x-icon" />
+    <title>Match it</title>
+  </head>
+  <body>
+    <div class="winner">
+      <div class="box">
+        <div class="trophy"><i class="fa-solid fa-award"></i></div>
+        <h2></h2>
+        <h1>congratulations, <span class="name">No one</span></h1>
+        <p>You Finshed the game with <span class="mright">0</span> Right moves , and <span class="mwrong">0</span> Wrong moves</p>
+      </div>
+    </div>
+
+    <div class="overlay-name">
+      <div class="from">
+        <input type="text" placeholder="Your Name ?" />
+        <div class="gameon">Start Game</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="contant-space">
+        <div class="flex">
+          <div class="name"><i class="fa-regular fa-user"></i><span>...</span></div>
+          <div class="right"><i class="fa-regular fa-circle-check"></i><span>0</span></div>
+        </div>
+        <div class="flex">
+          <div class="time"><i class="fa-solid fa-stopwatch"></i><span>0</span></div>
+          <div class="wrong"><i class="fa-regular fa-circle-xmark"></i><span>0</span></div>
+        </div>
+        <div class="realad"><i class="fa-solid fa-arrow-rotate-right"></i></div>
+      </div>
+
+      <div class="body">
+        <div class="container-cards">
+          <div class="card" data-icon="info">
+            <div class="style-card front-card"><i class="fa-solid fa-circle-info"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+          <div class="card" data-icon="info">
+            <div class="style-card front-card"><i class="fa-solid fa-circle-info"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="apple">
+            <div class="style-card front-card"><i class="fa-solid fa-apple-whole"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="apple">
+            <div class="style-card front-card"><i class="fa-solid fa-apple-whole"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="lock">
+            <div class="style-card front-card"><i class="fa-solid fa-lock"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="lock">
+            <div class="style-card front-card"><i class="fa-solid fa-lock"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="plane">
+            <div class="style-card front-card"><i class="fa-solid fa-plane"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="plane">
+            <div class="style-card front-card"><i class="fa-solid fa-plane"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="tree">
+            <div class="style-card front-card"><i class="fa-solid fa-tree"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="tree">
+            <div class="style-card front-card"><i class="fa-solid fa-tree"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="sun">
+            <div class="style-card front-card"><i class="fa-solid fa-mountain-sun"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="sun">
+            <div class="style-card front-card"><i class="fa-solid fa-mountain-sun"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="moon">
+            <div class="style-card front-card"><i class="fa-solid fa-moon"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="moon">
+            <div class="style-card front-card"><i class="fa-solid fa-moon"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="crown">
+            <div class="style-card front-card"><i class="fa-solid fa-crown"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="crown">
+            <div class="style-card front-card"><i class="fa-solid fa-crown"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="puzzle">
+            <div class="style-card front-card"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="puzzle">
+            <div class="style-card front-card"><i class="fa-solid fa-puzzle-piece"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="sd-card">
+            <div class="style-card front-card"><i class="fa-solid fa-sd-card"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+
+          <div class="card" data-icon="sd-card">
+            <div class="style-card front-card"><i class="fa-solid fa-sd-card"></i></div>
+            <div class="style-card back-card"><i class="fa-solid fa-asterisk"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="master.js"></script>
+</html>
